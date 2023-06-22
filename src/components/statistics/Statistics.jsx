@@ -5,11 +5,7 @@ import css from './statistics.module.css';
 export const Statistics = ({ title, stats }) => (
   <section className={css.statistics}>
     {title && <h2 className={css.title}>{title}</h2>}
-    <ul class={css['stat-list']}>
-      {stats.map(item => (
-        <StatisticItem {...item} />
-      ))}
-    </ul>
+    <ul className={css['stat-list']}>{stats.map(StatisticItem)}</ul>
   </section>
 );
 Statistics.propTypes = {

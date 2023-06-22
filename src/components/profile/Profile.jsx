@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './profile.module.css';
 
-console.log(css);
 export const Profile = ({
   username,
   tag,
@@ -18,15 +17,15 @@ export const Profile = ({
     </div>
 
     <ul className={css.stats}>
-      <li>
+      <li key="followers">
         <span className={css.label}>Followers</span>
         <span className={css.quantity}>{followers}</span>
       </li>
-      <li>
+      <li key="views">
         <span className={css.label}>Views</span>
         <span className={css.quantity}>{views}</span>
       </li>
-      <li>
+      <li key="likes">
         <span className={css.label}>Likes</span>
         <span className={css.quantity}>{likes}</span>
       </li>
